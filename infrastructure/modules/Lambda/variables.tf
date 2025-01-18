@@ -48,9 +48,16 @@ variable "environment_variables" {
   default     = {}
 }
 
-variable "iam_policy" {
-  description = "IAM policy JSON for the Lambda execution role"
-  type        = string
+variable "policies" {
+  description = "A map of policies to attach to the Lambda role"
+  type        = map(object({
+    Version   = string
+    Statement = list(object({
+      Effect   = string
+      Action   = list(string)
+      Resource = list(string)
+    }))
+  }))
 }
 
 variable "tags" {
