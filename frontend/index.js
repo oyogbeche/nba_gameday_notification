@@ -42,7 +42,7 @@ form.addEventListener("submit", async function(event) {
         });
 
         if (response.status === 200) {
-            ShowAlert("Favorite teams saved successfully!", "success");
+            ShowAlert("Favorite teams saved successfully! Please verify your email.", "success");
         } else {
             ShowAlert("Failed to save favorite teams. Please try again.", "error");
         }
