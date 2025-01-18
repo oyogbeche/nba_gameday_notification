@@ -8,7 +8,7 @@ resource "aws_apigatewayv2_api" "api" {
     allow_methods = [
       "GET",
       "POST",
-      "OPTIONS"
+      "OPTIONS",
     ]
     allow_origins  = ["*"]
     expose_headers = []
