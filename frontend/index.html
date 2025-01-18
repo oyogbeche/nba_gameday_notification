@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Preference Form</title>
+    <link href="./style.css" rel="stylesheet"/>
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>NBA GameDay Update</h1>
+        <form id="preferencesForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="preferences">Favorite teams:</label>
+            <input type="text" id="preferences" name="preferences" placeholder="Enter your favorite teams (e.g., GSW)" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <footer>Powered by Oyame</footer>
+    </div>
+
+    <div id="alert-box">
+        <p id="alertMessage"></p>
+        <button id="okButton">OK</button>
+    </div>
+
+</body>
+</html>
