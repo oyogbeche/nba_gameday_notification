@@ -1,6 +1,7 @@
 resource "aws_s3_bucket" "bucket" {
   bucket        = var.bucket_name
   force_destroy = var.force_destroy
+  tags = var.tags
 }
 
 resource "aws_s3_bucket_versioning" "bucket_versioning" {
@@ -14,5 +15,5 @@ resource "aws_s3_bucket_versioning" "bucket_versioning" {
 resource "aws_s3_bucket_policy" "bucket_policy" {
   count  = var.create_bucket_policy ? 1 : 0
   bucket = aws_s3_bucket.bucket.id
-  policy = jsonencode(var.bucket_policy)
+  policy = var.bucket_policy
 }
