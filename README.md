@@ -17,7 +17,15 @@ The NBA Gameday Notification Service is an event-driven service designed to fetc
 
 ## Project Structure
 ```markdown
-    nba-gameday-notification/  
+    nba-gameday-notification/ 
+    ├── .github/workflows
+    │   └── frontend_ci_cd.yaml        # CI/CD for frontend
+    │ 
+    ├──frontend/                       # files for Web UI
+    │   ├── index.html
+    │   ├── index.js
+    │   └── style.css
+    │ 
     ├── infrastructure/                 
     │   ├── modules/     
     │   ├── main.tf                     # AWS infrastructure definition
@@ -31,6 +39,8 @@ The NBA Gameday Notification Service is an event-driven service designed to fetc
     ├── .gitignore                      # Ignored files   
     └── README.md                       # Project documentation 
 ```
+## Architecture 
+![Architecture](./media/nba_notification_workflow.jpeg)
 
 ## Getting Started
 Prerequisites
