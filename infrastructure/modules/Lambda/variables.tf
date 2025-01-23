@@ -21,7 +21,6 @@ variable "lambda_source_path" {
 variable "zip_output_path" {
   description = "path to the directory to store the Lambda zip output"
   type = string
-  default = "/src/gd_notification.zip"
 }
 
 variable "timeout" {
