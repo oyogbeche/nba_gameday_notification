@@ -5,6 +5,13 @@ terraform {
       version = "5.82.2"
     }
   }
+  backend "s3" {
+    bucket         = "oyogbeche-resume-terraform-state"
+    key            = "nba_gameday/terraform.tfstate"
+    region         = "eu-west-1"
+    dynamodb_table = "terraform-state-locking"
+    encrypt        = true
+  }
 }
 
 provider "aws" {
