@@ -4,7 +4,7 @@ The NBA Gameday Notification Service is an event-driven service designed to fetc
 ## Features
 - **Real-time NBA Data:** Fetches live game fixtures and scores from the Sportsdata.io API.
 - **Event-driven Architecture:** Built using AWS services to ensure seamless data collection and notification dispatch.
-- **Multi-channel Notifications:** Sends updates via email and SMS using Amazon SNS.
+- **Notifications:** Sends updates via email using Amazon SES.
 - **Serverless:** Fully serverless implementation using AWS Lambda for executing tasks.
 - **Infrastructure as Code:** All AWS resources are provisioned using Terraform for consistency and scalability.
 
